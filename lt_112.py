@@ -1,3 +1,4 @@
+
 # similar to question 111, leaf definition is changed a little bit
 class Solution(object):
     def hasPathSum(self, root, sum):
@@ -19,11 +20,6 @@ class Solution(object):
         
         # path sum need to update before recursive call
         sum = sum - root.val
-        if root.left == None:
-            return self.hasPathSum(root.right, sum)
-        
-        if root.right == None:
-            return self.hasPathSum(root.left, sum)
         
         # skeleton is here again :)
         if self.hasPathSum(root.left, sum):
@@ -33,3 +29,4 @@ class Solution(object):
             return True
         
         return False
+        
